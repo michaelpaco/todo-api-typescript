@@ -1,0 +1,55 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build API",
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$tsc",
+        "$tslint5"
+      ]
+    },
+    {
+      "label": "Launch API",
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": "$eslint-stylish"
+    },
+    {
+      "label": "Watch build and launch API",
+      "type": "npm",
+      "script": "watch-debug",
+      "problemMatcher": [
+        "$tsc-watch",
+        "$tslint5",
+        "$eslint-stylish"
+      ]
+    },
+    {
+      "label": "Run Tests",
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$tsc",
+        "$tslint5"
+      ]
+    },
+    {
+      "label": "TS lint",
+      "type": "npm",
+      "script": "tslint",
+      "problemMatcher": "$tslint5"
+    }
+  ]
+}
