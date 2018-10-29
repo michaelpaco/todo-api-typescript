@@ -2,23 +2,24 @@
   "name": "todo-api-typescript",
   "version": "1.0.0",
   "description": "todo api with typescript",
-  "main": "./dist/server.js",
+  "main": "build/server.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/michaelpaco/todo-api-typescript"
   },
   "bugs": "https://github.com/michaelpaco/todo-api-typescript/issues",
   "scripts": {
-    "start": "node ./dist/server.js",
-    "start:watch": "nodemon ./dist/server.js",
-    "start:debug": "nodemon --inspect ./dist/server.js",
-    "build": "tsc",
+    "start": "node build/server.js",
+    "start:watch": "nodemon build/server.js",
+    "start:debug": "nodemon --inspect build/server.js",
+    "build": "rm -rvf build && tsc",
     "build:watch": "tsc -w",
-    "test": "jest --forceExit --detectOpenHandles",
+    "test": "rm -rvf coverage && jest --forceExit --detectOpenHandles",
     "test:watch": "npm run test -- --watchAll",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "debug": "npm run build && npm run debug:watch",
-    "debug:watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run build:watch\" \"npm run start:debug\""
+    "debug:watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run build:watch\" \"npm run start:debug\"",
+    "postinstall": "npm run build"
   },
   "author": {
     "name": "Michael Alves <michael.paco.alves@gmail.com",

@@ -25,7 +25,7 @@
     {
       "label": "Watch build and launch API",
       "type": "npm",
-      "script": "watch-debug",
+      "script": "debug",
       "problemMatcher": [
         "$tsc-watch",
         "$tslint5",
@@ -48,7 +48,7 @@
     {
       "label": "TS lint",
       "type": "npm",
-      "script": "tslint",
+      "script": "lint",
       "problemMatcher": "$tslint5"
     }
   ]

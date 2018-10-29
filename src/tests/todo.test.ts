@@ -1,9 +1,9 @@
 process.env.NODE_ENV = "test";
 import { expect } from "chai";
 import request from "supertest";
-import app from "../src/app";
+import app from "../app";
 import mongoose, { Types } from "mongoose";
-import { MONGODB_URI } from "../src/util/secrets";
+import { MONGODB_URI } from "../util/secrets";
 
 let ID: Types.ObjectId;
 

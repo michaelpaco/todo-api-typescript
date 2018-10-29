@@ -7,22 +7,17 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "moduleResolution": "node",
-    "outDir": "dist",
-    "baseUrl": ".",
+    "outDir": "./build",
+    "rootDir": "./src",
     "sourceMap": true,
     "newLine": "LF",
-    "skipLibCheck": true,
-    "paths": {
-      "*": [
-        "node_modules/*"
-      ]
-    }
+    "skipLibCheck": true
   },
-  "include": [
-    "src/**/*"
-  ],
   "exclude": [
     "node_modules",
-    "**/*.test.ts"
+    "coverage",
+    "build",
+    "tests",
+    "jest.config.js"
   ]
 }
