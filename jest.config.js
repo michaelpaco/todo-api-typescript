@@ -18,7 +18,6 @@ module.exports = {
   moduleDirectories: ["node_modules"],
   testPathIgnorePatterns: ["node_modules", "dist"],
   testEnvironment: "node",
-  coverageReporters: ["lcov"],
   collectCoverage: true,
   verbose: true
 };

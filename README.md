@@ -1,5 +1,7 @@
 # Todo List API
 
+[![Coverage Status](https://coveralls.io/repos/github/michaelpaco/todo-api-typescript/badge.svg?branch=master)](https://coveralls.io/github/michaelpaco/todo-api-typescript?branch=master)
+
 ### The Challenge
 
 - Create a Todo List API in Node JS
