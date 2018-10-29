@@ -2,26 +2,24 @@
   "name": "todo-api-typescript",
   "version": "1.0.0",
   "description": "todo api with typescript",
-  "main": "dist/server.js",
+  "main": "./dist/server.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/michaelpaco/todo-api-typescript"
   },
   "bugs": "https://github.com/michaelpaco/todo-api-typescript/issues",
   "scripts": {
-    "start": "npm run serve",
-    "build": "npm run build-ts && npm run tslint",
-    "serve": "node dist/server.js",
-    "watch-node": "nodemon dist/server.js",
+    "start": "node ./dist/server.js",
+    "start:watch": "nodemon ./dist/server.js",
+    "start:debug": "nodemon --inspect ./dist/server.js",
+    "build": "tsc",
+    "build:watch": "tsc -w",
     "test": "jest --forceExit --detectOpenHandles",
-    "watch-test": "npm run test -- --watchAll",
-    "build-ts": "node_modules/.bin/tsc",
-    "watch-ts": "node_modules/.bin/tsc -w",
-    "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "debug": "npm run build && npm run watch-debug",
-    "serve-debug": "nodemon --inspect dist/server.js",
-    "postinstall": "npm run build",
-    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\""
+    "test:watch": "npm run test -- --watchAll",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "debug": "npm run build && npm run debug:watch",
+    "debug:watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run build:watch\" \"npm run start:debug\"",
+    "postinstall": "npm run build"
   },
   "author": {
     "name": "Michael Alves <michael.paco.alves@gmail.com",
