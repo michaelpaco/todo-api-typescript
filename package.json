@@ -18,8 +18,7 @@
     "test:watch": "npm run test -- --watchAll",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "debug": "npm run build && npm run debug:watch",
-    "debug:watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run build:watch\" \"npm run start:debug\"",
-    "postinstall": "npm run build"
+    "debug:watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run build:watch\" \"npm run start:debug\""
   },
   "author": {
     "name": "Michael Alves <michael.paco.alves@gmail.com",
